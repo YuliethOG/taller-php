@@ -10,23 +10,23 @@
 <div class="container">
     <h1 class="page-header">Formulario</h1>
 
-    <form id="formulario" method="POST" action="prueba.html">
+    <form id="formulario" method="POST" action="dashboard.php">
 
         <div class="form-group">
             <label>Nombre</label>
-            <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre"/>
+            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre"/>
             <span data-key="nombre" class="badge badge-danger"></span>
         </div>
         
         <div class="form-group">
             <label>Apellido</label>
-            <input type="text" name="apellido" class="form-control" placeholder="Ingrese su apellido"/>
+            <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ingrese su apellido"/>
             <span data-key="apellido" class="badge badge-danger"></span>
         </div>
 
         <div class="form-group">
             <label>Correo Electronico</label>
-            <input type="text" name="correo" class="form-control" placeholder="Ingrese el correo"/>
+            <input type="text" name="correo" id="correo" class="form-control" placeholder="Ingrese el correo"/>
             <span data-key="correo" class="badge badge-danger"></span>
         </div>
 
@@ -46,26 +46,48 @@
 
             var form = $("#formulario");
             form.submit(function(){
-
+             
                 form.find('.badge-danger').text('');  
-
+                var nombre =document.getElementById("nombre").value;
+                var apellido =$("#apellido").val();
+                var correo = document.getElementById("correo").value;
                 $.ajax({
                     url:"procesa.php",
                     method: "POST",
-                    data: form.serialize(),
+                    data: {
+                        'nombre': nombre,
+                        'apellido': apellido,
+                        'correo': correo
+
+                    },
+                  //  data: form.serialize(),
+                    beforeSend: function() {
+                        alert ("Cargando......");
+                    },
                     success:function(resp){
                         if(!resp.respuesta){
                             for(let k in resp.errores){
                                 $("span[data-key='" + k + "']").text(resp.errores[k]);
                             }
                         }
-                    },
+                        else {
+                        $("#nombre").val("");
+                        $("#apellido").val("");
+                        $("#correo").val("");
+                        window.location.href = "dashboard.php";}}
+                    
+                    
+
+                ,
+                    error: function() { 
+                        alert ("Error");
+                },
                     dataType: "json"
 
                 });//fin del ajax              
-
+               
                 return false;
-
+                 
             });
             
             
