@@ -31,7 +31,15 @@ if(!empty($_POST)){ //si el formulario no esta vacio
 
 
 }
-
+    if (count($validaciones)===0){
+        session_start();
+        if(isset($_POST['nombre'], $_POST['apellido'])){
+            $nombre = $_POST['nombre'];
+            $apellido = $_POST['apellido'];
+            $_SESSION['nombre']=$nombre ." ". $apellido;
+        
+        }
+    }
 echo json_encode([
     'respuesta' => count($validaciones)===0,
     'errores'=> $validaciones

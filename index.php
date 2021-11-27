@@ -1,3 +1,17 @@
+
+<?php
+session_start();
+if(isset($_SESSION['nombre'])){
+     echo "Bienvenido session  ". $_SESSION['nombre'];
+     header("Location: dashboard.php");
+     die();
+}
+else{
+    echo "sin sesion";
+    
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,6 +48,7 @@
             <button type="submit" class="btn btn-primary">Ingresar</button>
         </div>
         
+
     </form>
 </div> 
 
@@ -74,7 +89,8 @@
                         $("#nombre").val("");
                         $("#apellido").val("");
                         $("#correo").val("");
-                        window.location.href = "dashboard.php";}}
+                       // window.location.href = "dashboard.php";
+                        }}
                     
                     
 
