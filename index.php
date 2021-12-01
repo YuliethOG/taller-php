@@ -1,8 +1,8 @@
 
 <?php
 session_start();
-if(isset($_SESSION['nombre'])){
-     echo "Bienvenido session  ". $_SESSION['nombre'];
+if(isset($_SESSION['usuario'])){
+     echo "Bienvenido session  ". $_SESSION['usuario'];
      header("Location: dashboard.php");
      die();
 }
@@ -45,7 +45,9 @@ else{
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Ingresar</button>
+            <input type="submit" class="btn btn-primary" value="Ingresar"/>
+            
+
         </div>
         
 

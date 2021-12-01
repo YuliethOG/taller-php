@@ -36,7 +36,7 @@ if(!empty($_POST)){ //si el formulario no esta vacio
         if(isset($_POST['nombre'], $_POST['apellido'])){
             $nombre = $_POST['nombre'];
             $apellido = $_POST['apellido'];
-            $_SESSION['nombre']=$nombre ." ". $apellido;
+            $_SESSION['usuario']=$nombre ." ". $apellido;
         
         }
     }
