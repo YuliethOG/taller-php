@@ -25,32 +25,29 @@ else{
     <h1 class="page-header">Formulario</h1>
 
     <form id="formulario" method="POST" action="dashboard.php">
-
-        <div class="form-group">
-            <label>Nombre</label>
-            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre"/>
-            <span data-key="nombre" class="badge badge-danger"></span>
-        </div>
-        
-        <div class="form-group">
-            <label>Apellido</label>
-            <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Ingrese su apellido"/>
-            <span data-key="apellido" class="badge badge-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label>Correo Electronico</label>
-            <input type="text" name="correo" id="correo" class="form-control" placeholder="Ingrese el correo"/>
-            <span data-key="correo" class="badge badge-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="Ingresar"/>
+        <div class="container mt-3  p-1 my-3 bg-secondary">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control border border-success" placeholder="Ingrese su nombre"/>
+                <span data-key="nombre" class="badge badge-danger"></span>
+            </div>
             
+            <div class="form-group">
+                <label>Apellido</label>
+                <input type="text" name="apellido" id="apellido" class="form-control border border-success" placeholder="Ingrese su apellido"/>
+                <span data-key="apellido" class="badge badge-danger"></span>
+            </div>
 
+            <div class="form-group">
+                <label>Correo Electronico</label>
+                <input type="text" name="correo" id="correo" class="form-control border border-success" placeholder="Ingrese el correo"/>
+                <span data-key="correo" class="badge badge-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Ingresar"/>
+            </div>
         </div>
-        
-
     </form>
 </div> 
 

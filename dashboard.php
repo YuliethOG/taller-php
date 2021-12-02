@@ -1,5 +1,6 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-<h1>Bienvenido a la pagina de ejercicios</h1>
+<h1 class="text-danger">Bienvenido a la pagina de ejercicios</h1>
 <?php
 
 session_start();
@@ -15,43 +16,45 @@ else{
 <html>           
     <body  class="text-center" >
        
-   
-   <h3> Ejercicio A</h3>
+<div class="container mt-5  p-1 my-3 bg-primary">
+   <h3 class="text-white"> Ejercicio A</h3>
   
     Ingrese primer numero: <input class="text-center" type="number" id="num1"> <br> </br>
-    Ingrese segundo numero: <input type="number" id="num2" > <br> </br>
-    Ingrese tercer numero: <input type="number" id="num3"> <br> </br>
+    Ingrese segundo numero: <input class="text-center"type="number" id="num2" > <br> </br>
+    Ingrese tercer numero: <input class="text-center" type="number" id="num3"> <br> </br>
                 
      El valor de la suma es:             <span id="suma"></span> <br> </br>
 
      La cantidad de veces que se a realizado el ejercicio son: <span id="cont"></span> <br> </br>
      <button onclick="suma()">Suma: </button> <br> </br>
-
-     <h3> Ejercicio G</h3>
-     Digite su salario bruto: <input type="number" id="salario"> <br> </br>
+</div>  
+<div class="container mt-5  p-1 my-3 bg-success">
+     <h3 class="text-white"> Ejercicio G</h3>
+     Digite su salario bruto: <input class="text-center" type="number" id="salario"> <br> </br>
      Su salario es:              <span id="resultado"></span> <br> </br>
      La cantidad de veces que se a realizado el ejercicio son: <span id="cont1"></span> <br> </br>
      <button onclick="salario()">Salario </button> <br> </br>
-   
+</div>    
      <br> </br>
-     <h3> Ejercicio H</h3>
-    Ingrese la primera nota: <input type="number" id="nota1" > <br> </br>
-    Ingrese la segunda nota: <input type="number" id="nota2" > <br> </br>
-    Ingrese la tercera nota: <input type="number" id="nota3"> <br> </br>
-    Ingrese la cuarta nota: <input type="number" id="nota4"> <br> </br>            
+<div class="container mt-1  p-1 my-3 bg-secondary">
+     <h3 class="text-white"> Ejercicio H</h3>
+    Ingrese la primera nota: <input class="text-center" type="number" id="nota1" > <br> </br>
+    Ingrese la segunda nota: <input class="text-center" type="number" id="nota2" > <br> </br>
+    Ingrese la tercera nota: <input class="text-center" type="number" id="nota3"> <br> </br>
+    Ingrese la cuarta nota: <input class="text-center" type="number" id="nota4"> <br> </br>            
      El Promedio de la nota es:              <span id="promedio"></span> <br> </br>
      La cantidad de veces que se a realizado el ejercicio son: <span id="cont2"></span> <br> </br>
      <button onclick="notas()">Promedio </button> <br> </br>
-
+</div>
      <br> </br>
-
-     <h3> Ejercicio J</h3>
-     Digite el valor de su compra: <input type="number" id="compra"> <br> </br>
+<div class="container mt-3  p-1 my-3 bg-info">
+     <h3 class="text-white"> Ejercicio J</h3>
+     Digite el valor de su compra: <input class="text-center" type="number" id="compra"> <br> </br>
      El valor total de su compra es:              <span id="Total_compra"></span> <br> </br>
      La cantidad de veces que se a realizado el ejercicio son: <span id="cont4"></span> <br> </br>
      <button onclick="compra()">compra</button> <br> </br>
-
-     <a href="logout.php">Cerrar Sesión</a>
+</div>
+     <a href="logout.php" class="btn btn-success">Cerrar Sesión</a>
      </body>
 </html>
  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -172,3 +175,7 @@ else{
       $('#cont4').text(cont4+"    veces");  
      } 
  </script>
+ 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
